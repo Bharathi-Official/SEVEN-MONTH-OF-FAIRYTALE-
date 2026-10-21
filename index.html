@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170f2d">
+<title>Seven Months, One Forever ✨</title>
+<style>
+:root{--night:#160f2c;--plum:#302047;--lav:#c9a8ff;--gold:#ffe5a1;--rose:#ffb8d0;--cream:#fff8ed}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--cream);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;content:"";z-index:0;background-image:radial-gradient(2px 2px at 12% 18%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 28% 70%,#ffe8b2 45%,transparent 55%),radial-gradient(2px 2px at 73% 14%,#fff 45%,transparent 55%),radial-gradient(1px 1px at 88% 52%,#e9d7ff 45%,transparent 55%),radial-gradient(1px 1px at 56% 38%,#fff 45%,transparent 55%),radial-gradient(2px 2px at 42% 86%,#ffe8b2 45%,transparent 55%);background-size:370px 330px;animation:twinkle 5s ease-in-out infinite alternate}
+.stars:before{transform:translateY(100px);opacity:.45;animation-duration:8s}.stars:after{transform:translateY(-80px);opacity:.3;animation-duration:6s}
+@keyframes twinkle{from{opacity:.35}to{opacity:1}}
+main{position:relative;z-index:1}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:55px 20px 42px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;width:min(95vw,760px);height:min(95vw,760px);border-radius:50%;background:radial-gradient(circle,rgba(158,105,215,.25),rgba(66,38,94,.1) 52%,transparent 70%);z-index:-1}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font:600 .72rem Arial,sans-serif}
+h1{font-size:clamp(2.8rem,9vw,6.4rem);line-height:.98;font-weight:400;margin:20px 0;color:#fff2d3;text-shadow:0 0 32px #c49cff55}
+h1 span{display:block;font-style:italic;color:#e3c7ff}
+.subtitle{max-width:590px;font-size:clamp(1.05rem,2.8vw,1.3rem);line-height:1.8;color:#e6d9f4;margin:10px auto 25px}
+.seal{width:118px;height:118px;border:1px solid #f8dba8;border-radius:50%;display:grid;place-items:center;margin:0 auto 23px;box-shadow:0 0 35px #b99aff33,inset 0 0 24px #b99aff22;font-size:2.8rem;position:relative}
+.seal:before{content:"";position:absolute;inset:8px;border:1px dashed #f8dba8aa;border-radius:50%}
+.primary,.secondary{border:0;border-radius:999px;padding:14px 23px;transition:transform .2s,box-shadow .2s}
+.primary{background:linear-gradient(120deg,#f8dca0,#e6b9ff);color:#2a173e;box-shadow:0 8px 28px #d6adff25;font-weight:bold}
+.primary:hover,.secondary:hover{transform:translateY(-2px);box-shadow:0 10px 30px #d6adff35}
+.secondary{background:#ffffff0d;border:1px solid #f1d6ff66;color:var(--cream)}
+.scroll{position:absolute;bottom:19px;color:#c9b5df;font: .7rem Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+section{padding:80px 20px;max-width:1000px;margin:auto}
+.section-kicker{text-align:center;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font: .7rem Arial,sans-serif}
+h2{text-align:center;font-size:clamp(2rem,6vw,3.5rem);font-weight:400;margin:13px 0 15px}
+.intro{text-align:center;color:#d7c8e7;line-height:1.8;max-width:650px;margin:0 auto 35px}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.chapter{border:1px solid #ffffff20;background:linear-gradient(145deg,#ffffff0d,#ffffff04);border-radius:20px;padding:22px;min-height:178px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+.chapter:hover{transform:translateY(-4px);border-color:#e9c9ff88}
+.chapter .num{color:var(--gold);font: .7rem Arial,sans-serif;letter-spacing:.15em}
+.chapter .emoji{font-size:1.7rem;display:block;margin:12px 0}
+.chapter h3{font-size:1.35rem;font-weight:400;margin:0 0 9px;color:#f6e9ff}
+.chapter p{font-size:.97rem;line-height:1.65;color:#d7c8e7;margin:0}
+.chapter .secret{display:none;margin-top:13px;color:#ffe6af;font-style:italic}
+.chapter.open .secret{display:block;animation:fade .5s ease}
+.chapter.open{background:linear-gradient(145deg,#5b3b7955,#ffffff08)}
+@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.tap-hint{text-align:center;color:#bca8d2;font: .8rem Arial,sans-serif;margin-top:17px}
+.scene{border:1px solid #ffe2aa55;border-radius:28px;padding:clamp(24px,5vw,48px);text-align:center;background:radial-gradient(ellipse at 50% 0%,#79539a55,transparent 65%),#ffffff08;position:relative;overflow:hidden}
+.scene-art{display:flex;justify-content:center;align-items:end;gap:12px;margin:10px auto 25px;height:185px}
+.person{position:relative;width:105px;height:160px;filter:drop-shadow(0 0 20px #c7a1ff30)}
+.head{position:absolute;top:20px;left:29px;width:49px;height:53px;border-radius:48% 48% 45% 45%;background:#f3c9a8;z-index:2}
+.hairgirl{position:absolute;top:5px;left:16px;width:77px;height:112px;border-radius:48% 48% 35% 35%;background:linear-gradient(90deg,#7d4828,#d7a55c 42%,#f4d18b 62%,#8d542c);z-index:1}
+.hairgirl:after{content:"";position:absolute;top:45px;left:2px;width:20px;height:100px;border-radius:20px;background:linear-gradient(90deg,#7c482a,#d3a35e)}
+.hairboy{position:absolute;top:9px;left:24px;width:61px;height:38px;border-radius:60% 60% 25% 25%;background:linear-gradient(120deg,#2b1d20,#6d4a36);z-index:3}
+.eye{position:absolute;top:25px;width:4px;height:5px;background:#49302c;border-radius:50%;z-index:4}.eye.l{left:12px}.eye.r{right:12px}
+.smile{position:absolute;left:20px;top:37px;width:10px;height:5px;border-bottom:1.5px solid #9e5c63;border-radius:50%;z-index:4}
+.bodygirl{position:absolute;top:70px;left:14px;width:79px;height:88px;background:linear-gradient(130deg,#d8b9ff,#7b58a8);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);border-radius:15px}
+.bodyboy{position:absolute;top:68px;left:15px;width:77px;height:87px;background:linear-gradient(120deg,#8ddbd0,#347b89);clip-path:polygon(24% 0,76% 0,100% 100%,0 100%);border-radius:12px}
+.crown{position:absolute;top:4px;left:32px;z-index:5;font-size:22px;filter:drop-shadow(0 0 6px #ffe5a1)}
+.scene h2{margin-top:0}
+.scene p{max-width:670px;margin:0 auto 17px;line-height:1.9;color:#e8ddef}
+.promise{font-size:clamp(1.2rem,3vw,1.7rem);font-style:italic;color:#ffe4a3;line-height:1.7;margin:28px auto}
+.promise span{display:block;font-size:2rem;margin-bottom:8px}
+.letter{max-width:720px;margin:auto;background:#fff7e9;color:#4c3153;border-radius:5px;padding:clamp(24px,5vw,48px);box-shadow:0 20px 60px #0003;position:relative;transform:rotate(-.3deg)}
+.letter:before{content:"";position:absolute;inset:10px;border:1px solid #d7b5d2;pointer-events:none}
+.letter .to{color:#8e5a8d;font-style:italic}
+.letter p{line-height:1.9;font-size:1.05rem;position:relative}
+.letter .sign{font-size:1.4rem;font-style:italic;text-align:right;color:#7d4e87;margin-top:25px}
+footer{text-align:center;padding:55px 20px 75px;color:#c8b4da;line-height:1.8}
+footer strong{display:block;color:#ffe4a3;font-size:1.3rem;font-weight:400}
+.heart{position:fixed;pointer-events:none;z-index:10;animation:float 2.4s ease-out forwards;font-size:20px}
+@keyframes float{0%{opacity:0;transform:translateY(0) scale(.6)}15%{opacity:1}100%{opacity:0;transform:translateY(-180px) translateX(var(--drift)) scale(1.4)}}
+@media(min-width:700px){.story-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.chapter:last-child{grid-column:2}}
+@media(max-width:420px){.story-grid{grid-template-columns:1fr}.chapter{min-height:0}.scene-art{transform:scale(.9)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main>
+<header class="hero" id="home">
+  <div class="eyebrow">October 22 · Our little forever</div>
+  <div class="seal" aria-label="seven months">♛<span style="position:absolute;font-size:1rem;bottom:19px;color:#ffe5a1">VII</span></div>
+  <h1>Seven Months,<span>One Forever</span></h1>
+  <p class="subtitle">For my Princess — the girl who quietly became my favourite part of every ordinary day, and the most magical chapter of my life. ❤️</p>
+  <button class="primary" onclick="beginStory()">Open your little fairytale ✨</button>
+  <div class="scroll">A little story made only for you ↓</div>
+</header>
+
+<section id="chapters">
+  <div class="section-kicker">Our story · Chapters I—VII</div>
+  <h2>Seven months of <em>us</em></h2>
+  <p class="intro">Tap each little star. These aren't just months on a calendar, Princess — they're seven pieces of a story my heart wants to keep telling.</p>
+  <div class="story-grid">
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER I</span><span class="emoji">🌱</span><h3>The beginning</h3><p>When “you” slowly started becoming “my favourite person.”</p><p class="secret">If I could return to the beginning, I'd still walk toward you. Every single time. 💗</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER II</span><span class="emoji">🦋</span><h3>The butterflies</h3><p>The little smiles, the nervous happiness, the magic in a simple message.</p><p class="secret">You made the smallest moments feel like scenes from my favourite movie. ✨</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER III</span><span class="emoji">🌙</span><h3>My comfort</h3><p>Somehow, your presence began to feel like home.</p><p class="secret">Even on a difficult day, the thought of you can make my world softer. 🫶</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER IV</span><span class="emoji">💌</span><h3>The little things</h3><p>Our words, our habits, our tiny moments that mean more than they seem.</p><p class="secret">It's never only the big things. It's all the little pieces of you that my heart keeps. 💞</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER V</span><span class="emoji">🌧️</span><h3>The missing</h3><p>Learning that distance, silence, and waiting can make a heart feel so full.</p><p class="secret">When I miss you, it isn't because I need every moment to be perfect. It's because you matter to me. 🥹</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER VI</span><span class="emoji">🕯️</span><h3>Choosing us</h3><p>Remembering that love is not only a feeling — it's patience, care, and trying again.</p><p class="secret">I want us to keep learning each other, speaking honestly, and holding each other's hearts gently. 🤍</p></article>
+    <article class="chapter" onclick="reveal(this)"><span class="num">CHAPTER VII</span><span class="emoji">👑</span><h3>My Princess, today</h3><p>Seven months later, there's still so much love left to give you.</p><p class="secret">This isn't the end of our fairytale. It's one more beautiful page — and I hope we write many more together. ❤️</p></article>
+  </div>
+  <p class="tap-hint">✦ Tap a chapter to reveal its hidden message ✦</p>
+</section>
+
+<section>
+  <div class="scene">
+    <div class="section-kicker">A little royal moment</div>
+    <div class="scene-art" aria-label="A prince and princess standing together">
+      <div class="person"><div class="hairgirl"></div><div class="head"><i class="eye l"></i><i class="eye r"></i><i class="smile"></i></div><div class="crown">♛</div><div class="bodygirl"></div></div>
+      <div style="font-size:1.7rem;margin-bottom:35px;color:#ffe5a1">♡</div>
+      <div class="person"><div class="hairboy"></div><div class="head"><i class="eye l"></i><i class="eye r"></i><i class="smile"></i></div><div class="bodyboy"></div></div>
+    </div>
+    <h2>My favourite place is <em>with you</em></h2>
+    <p>My beautiful Princess, you don't have to be happy every second, and you don't have to be perfect to be loved. You can be tired, quiet, silly, emotional, or simply yourself. I want you to feel safe enough to be all of you with me.</p>
+    <div class="promise"><span>✨</span>“Seven months down, my Princess.<br>And if my heart gets to choose again,<br>it will still choose you.”</div>
+    <button class="secondary" onclick="showerHearts(event)">Send a little shower of love 💗</button>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="section-kicker">From your Prince, with all my heart</div>
+  <h2>A letter for you, <em>my love</em></h2>
+  <div class="letter">
+    <p class="to">To my dearest Princess, 👑❤️</p>
+    <p>Happy seven-monthsary, my love. 💌</p>
+    <p>Seven months may look like just a number to the world, but to me, it holds so many feelings, so many little memories, so many moments when you crossed my mind and made me smile without even knowing it.</p>
+    <p>Some days, I miss you more than I can explain. Sometimes I wait for a message, replay a conversation in my head, or wish I could borrow just a little more time with you. That's how precious our little moments have become to me.</p>
+    <p>I don't promise that every day will be perfect. I promise that your feelings matter to me, that I'll keep trying to understand you, and that I want us to be able to talk through the hard moments with kindness. I want to celebrate your happiness, comfort you when life feels heavy, laugh with you over the silliest things, and keep making memories that belong only to us.</p>
+    <p>Thank you for being the Princess in my fairytale — not because you're from a perfect story, but because being close to you makes this real life feel a little more magical.</p>
+    <p>Today is our seventh month, but my favourite part isn't counting how long we've been together. It's knowing that there's still so much of you to discover, so many stories to share, and so many tomorrows we can look forward to.</p>
+    <p>So, my Princess, whenever you read this, imagine me holding your hand beneath a sky full of stars and telling you softly: <em>I'm so glad it's you.</em> ❤️</p>
+    <p class="sign">Forever your Prince,<br> Bharathi 🫶</p>
+  </div>
+</section>
+
+<section style="text-align:center;padding-top:25px">
+  <div class="seal" style="margin-bottom:22px">♡</div>
+  <div class="section-kicker">One last little promise</div>
+  <h2>To many more <em>Octobers</em></h2>
+  <p class="intro">May we keep choosing kindness, making each other laugh, saying what we feel, and finding our way back to each other — one little day at a time.</p>
+  <button class="primary" onclick="showerHearts(event);document.getElementById('home').scrollIntoView({behavior:'smooth'})">Replay our fairytale ✨</button>
+</section>
+<footer><strong>Happy 7th Monthsary, My Princess 👑❤️</strong>Made with a full heart, just for you.<br><span style="font-size:.8rem">October 22 · Seven months of us · And still, my favourite story.</span></footer>
+</main>
+<script>
+function beginStory(){document.getElementById('chapters').scrollIntoView({behavior:'smooth'});showerHearts({clientX:innerWidth/2,clientY:innerHeight*.65})}
+function reveal(card){card.classList.toggle('open')}
+function showerHearts(e){const x=e.clientX||innerWidth/2,y=e.clientY||innerHeight/2;const symbols=['💗','💖','✨','💕','🌸','❤️'];for(let i=0;i<22;i++){const h=document.createElement('span');h.className='heart';h.textContent=symbols[Math.floor(Math.random()*symbols.length)];h.style.left=(x+(Math.random()-.5)*180)+'px';h.style.top=(y+(Math.random()-.5)*40)+'px';h.style.setProperty('--drift',((Math.random()-.5)*170)+'px');h.style.animationDelay=(Math.random()*.6)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),3000)}}
+</script>
+</body>
+</html>
